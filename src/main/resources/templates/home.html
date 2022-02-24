@@ -9,21 +9,24 @@
   </head>
 
   <body>
-
+    <div class="container">
     <h1>Coronavirus Tracker Application</h1>
     <p>This application lists the current number of cases reported across the globe</p>
-  
-    <p th:text="${testName}"></p>
 
     <div class="jumbotron">
-        <h1 class="display-4" th:text="${totalReportedCases}"></h1>
-        <p class="lead">Total cases reported today</p>        
-    </div>
-    <div class="container">
-    <table>
+      <h1 class="display-4" th:text="${totalReportedCases}"></h1>
+      <p class="lead">Total cases reported</p>     
+      <hr class="my-4">   
+      <p>
+       <span th:text="${totalNewCases}"></span>
+       <span>new cases reported since previous day</span>       
+      </p>
+  </div>    
+    
+    <table class="table">
         <tr>
           <th>State</th>
-          <th>Contry</th>
+          <th>Country</th>
           <th>Total Cases Reported</th>
           <th>Changes Since Last Day</th>
         </tr>
